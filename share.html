@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Share</title>
+</head>
+
+<body>
+    <div class="page-header">
+        <h1>Share Dialog</h1>
+    </div>
+
+    <p>Click the button below to trigger a Share Dialog</p>
+
+    <div id="shareBtn" class="btn btn-success clearfix">Share</div>
+
+    <script>
+        document.getElementById('shareBtn').onclick = function() {
+            FB.ui({
+                method: 'share',
+                display: 'popup',
+                href: 'https://developers.facebook.com/docs/',
+            }, function(response) {});
+        }
+    </script>
+</body>
+
+</html>
