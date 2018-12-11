@@ -25,6 +25,7 @@
                 testAPI();
             } else {
                 // The person is not logged into your app or we are unable to tell.
+                document.getElementById('share').style.display = "none";
                 document.getElementById('status').innerHTML = 'Please log ' +
                     'into this app.';
             }
@@ -86,7 +87,7 @@
                 document.getElementById('share').style.display = "block";
             });
         }
-        document.getElementById('share').onclick = function() {
+        document.getElementById('shareBtn').onclick = function() {
             FB.ui({
                 method: 'share',
                 display: 'popup',
@@ -105,7 +106,7 @@
     <div id="status">
     </div>
 
-    <div id="share" style="display:none">
+    <div id="share">
         <div class="page-header">
             <h1>Share Dialog</h1>
         </div>
